@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable",content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style",content="black">
+  <meta name="format-detection",content="telephone=no">
+  <meta name="description",content="<%= description%>">
+  <title><%= title%></title>
+  <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/??sm.min.css,sm-extend.min.css">
+  <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+  <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script>
+</head>
+<body>
+<script type="text/javascript" src='<%=__assets.manifest.js%>'></script>
+<script type="text/javascript" src='<%=__assets.vendor.js%>'></script>
+<%- body%>
+
+<script>
+    //TODO:baidu analysis script setup
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>
