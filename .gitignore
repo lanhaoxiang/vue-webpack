@@ -2,8 +2,9 @@
 node_modules/
 dist/
 server/logs/
-.hashes/
+.idea
 npm-debug.log
 selenium-debug.log
 test/unit/coverage
 test/e2e/reports
+webpack-assets.json
