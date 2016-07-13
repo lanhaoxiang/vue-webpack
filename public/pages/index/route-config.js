@@ -2,23 +2,25 @@ export function configRouter (router) {
 
   // normal routes
   router.map({
-
     '/tab1': {
+      name:'tab1',
       component: require('./components/Tab1.vue')
     },
 
     '/tab2':{
+      name:'tab2',
       component: require('./components/Tab2.vue')
     },
 
     '/tab3':{
+      name:'tab3',
       component: require('./components/Tab3.vue')
     },
 
     '*': {
+      name:'not-found',
       component: require('./components/not-found.vue')
     }
-
   })
 
   router.redirect({
