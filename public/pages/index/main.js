@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 
 // create router
 const router = new VueRouter({
-  history: true,
+  history:true,
   linkActiveClass:'active',
   saveScrollPosition: true
 })

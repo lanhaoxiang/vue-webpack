@@ -1,5 +1,5 @@
 export function configRouter (router) {
-
+  router.hashbang=true;
   // normal routes
   router.map({
     '/tab1': {
@@ -41,7 +41,7 @@ export function configRouter (router) {
         transition.abort()
       }, 3000)
     } else {
-      // $.init();
+      $.init();
       transition.next()
     }
   })

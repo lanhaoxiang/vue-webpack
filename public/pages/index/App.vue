@@ -1,5 +1,6 @@
 
 <template>
+
   <div class="page">
     <router-view class="view" keep-alive></router-view>
     <nav class="bar bar-tab">

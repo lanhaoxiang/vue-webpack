@@ -25,10 +25,6 @@ if(app.get('env')==='development') {
   var webpack = require('webpack');
   var webpackConfig = require('../tools/webpack.dev.conf');
   var compiler = webpack(webpackConfig);
-
-  app.use(require('connect-history-api-fallback')({
-    index:'/'
-  }))
   app.use(require('webpack-dev-middleware')(compiler, {
     publicPath: webpackConfig.output.publicPath,
     lazy:false,
@@ -59,6 +55,11 @@ else{
   app.use(logger('combined', {stream: accessLogStream}));
 }
 
+app.use(require('connect-history-api-fallback')({
+  index:'/',
+  rewrites:[{from:'/tab',to:'/'}],
+  logger:app.get('env')=='development'?console.log:null
+}))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
