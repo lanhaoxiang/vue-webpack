@@ -1,3 +1,6 @@
+import store from './vuex/store'
+import { sync } from 'vuex-router-sync'
+
 export function configRouter (router) {
   router.hashbang=true;
   // normal routes
@@ -45,4 +48,6 @@ export function configRouter (router) {
       transition.next()
     }
   })
+
+  sync(store, router) // done.
 }
