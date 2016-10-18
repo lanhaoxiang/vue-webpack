@@ -53,6 +53,7 @@ else{
   })
   app.use(compression());
   app.use(logger('combined', {stream: accessLogStream}));
+  app.use(express.static(path.join(__dirname, '../dist')));
 }
 
 app.use(require('connect-history-api-fallback')({
